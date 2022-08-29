@@ -33,4 +33,11 @@ public class User {
 
     @Column(length = 60, nullable = false)
     private String senha;
+
+    public User(String cnpj, String email, String senha){
+        this.cnpj = cnpj;
+        this.email = email;
+        this.senha = senha;
+    }
 }
+
