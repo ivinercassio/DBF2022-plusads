@@ -6,15 +6,15 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.ApplicationArguments;
 import org.springframework.boot.ApplicationRunner;
 
-import br.com.ivinerejose.plusAds.model.User;
-import br.com.ivinerejose.plusAds.model.repository.UserRepository;
+import br.com.ivinerejose.plusAds.model.Anuncio;
+import br.com.ivinerejose.plusAds.model.repository.AnuncioRepository;
 
 
 @SpringBootApplication
 public class PlusAdsApplication implements ApplicationRunner{
 
 	@Autowired
-	UserRepository userRepository;
+	AnuncioRepository anuncioRepository;
 
 	public static void main(String[] args) {
 		SpringApplication.run(PlusAdsApplication.class, args);
@@ -22,9 +22,9 @@ public class PlusAdsApplication implements ApplicationRunner{
 
 	@Override
 	public void run(ApplicationArguments args){
-		User user = new User("cnpj", "email@teste.com", "123");
-		user = userRepository.save(user); // retorna o mesmo pet, mas agr com o id
-		System.out.println(user);		
+		Anuncio anuncio = new Anuncio("SubWay", "imagem", 2.50, "01/09/2022", "A");
+		anuncio = anuncioRepository.save(anuncio); // retorna o mesmo anuncio, mas agr com o id
+		System.out.println(anuncio);		
 	}
 
 }
