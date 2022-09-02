@@ -1,5 +1,7 @@
 package br.com.ivinerejose.plusAds.model;
 
+import java.util.Date;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -17,27 +19,35 @@ import lombok.ToString;
 @AllArgsConstructor
 @Getter
 @Setter
-@Entity (name="user")
+@Entity (name="anuncio")
 
-public class User {
+public class Anuncio {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
     
     @Column(length = 60, nullable = false)
-    private String cnpj;
+    private String titulo;
+
+    @Column(length = 60, nullable = true)
+    private String imagem;
 
     @Column(length = 60, nullable = false)
-    private String email;
+    private Double preco;
 
     @Column(length = 60, nullable = false)
-    private String senha;
+    private String dataValidade;
+    
+    @Column(length = 60, nullable = false)
+    private String status;
 
-    public User(String cnpj, String email, String senha){
-        this.cnpj = cnpj;
-        this.email = email;
-        this.senha = senha;
+    public Anuncio(String titulo, String imagem, Double preco, String dataValidade, String status){
+        this.titulo = titulo;
+        this.imagem = imagem;
+        this.preco = preco;
+        this.dataValidade = dataValidade;
+        this.status = status;
     }
 }
 
