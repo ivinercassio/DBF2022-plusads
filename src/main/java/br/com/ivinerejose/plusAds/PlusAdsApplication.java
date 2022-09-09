@@ -6,25 +6,29 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.ApplicationArguments;
 import org.springframework.boot.ApplicationRunner;
 
-import br.com.ivinerejose.plusAds.model.Anuncio;
-import br.com.ivinerejose.plusAds.model.repository.AnuncioRepository;
+import br.com.ivinerejose.plusAds.model.Contratante;
+import br.com.ivinerejose.plusAds.model.repository.ContratanteRepository;
 
 
 @SpringBootApplication
 public class PlusAdsApplication implements ApplicationRunner{
 
 	@Autowired
-	AnuncioRepository anuncioRepository;
+	ContratanteRepository contratanteRepository;
 
 	public static void main(String[] args) {
 		SpringApplication.run(PlusAdsApplication.class, args);
 	}
 
+	// Contratante (String nome, String cpf, String cnpj, String email, String senha, 
+    //                 String status, String telefone1, String telefone2)
+
 	@Override
 	public void run(ApplicationArguments args){
-		Anuncio anuncio = new Anuncio("SubWay", "imagem", 2.50, "01/09/2022", "A");
-		anuncio = anuncioRepository.save(anuncio); // retorna o mesmo anuncio, mas agr com o id
-		System.out.println(anuncio);		
+		Contratante contratante = new Contratante("SubWay", null, "12345678910123", "subway@contratante.com", "123",
+										"A", "31994375684", "31997455684");
+		contratante = contratanteRepository.save(contratante); // retorna o mesmo contratante, mas agr com o id
+		System.out.println(contratante);		
 	}
 
 }
