@@ -20,9 +20,6 @@ public class PlusAdsApplication implements ApplicationRunner{
 		SpringApplication.run(PlusAdsApplication.class, args);
 	}
 
-	// Contratante (String nome, String cpf, String cnpj, String email, String senha, 
-    //                 String status, String telefone1, String telefone2)
-
 	@Override
 	public void run(ApplicationArguments args){
 		Contratante contratante = new Contratante("SubWay", null, "12345678910123", "subway@contratante.com", "123",
