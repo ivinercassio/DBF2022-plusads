@@ -1,6 +1,6 @@
 {
-  "dependencies": { 
-    "serve": "^14.0.1" 
+  "dependencies": {
+    "serve": "^14.0.1"
   },
   "scripts": {
     "start": "node server.js",
