@@ -47,7 +47,7 @@ public class Contratante {
     @Column(length = 13, nullable = false)
     private String telefone1;
 
-    @Column(length = 13, nullable = false)
+    @Column(length = 13)
     private String telefone2;
 
     public Contratante (String nome, String cpf, String cnpj, String email, String senha, 
