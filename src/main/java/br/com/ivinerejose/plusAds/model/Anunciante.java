@@ -18,9 +18,9 @@ import lombok.ToString;
 @AllArgsConstructor
 @Getter
 @Setter
-@Entity (name="contratante")
+@Entity (name="anunciante")
 
-public class Contratante {
+public class Anunciante {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -47,10 +47,10 @@ public class Contratante {
     @Column(length = 13, nullable = false)
     private String telefone1;
 
-    @Column(length = 13)
+    @Column(length = 13, nullable = false)
     private String telefone2;
 
-    public Contratante (String nome, String cpf, String cnpj, String email, String senha, 
+    public Anunciante (String nome, String cpf, String cnpj, String email, String senha, 
                     String status, String telefone1, String telefone2){
         this.nome = nome;
         this.cpf = cpf;
