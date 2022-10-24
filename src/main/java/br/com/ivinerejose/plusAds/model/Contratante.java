@@ -1,6 +1,5 @@
 package br.com.ivinerejose.plusAds.model;
 
-
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;

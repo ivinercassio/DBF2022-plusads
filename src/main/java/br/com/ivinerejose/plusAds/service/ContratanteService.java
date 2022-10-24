@@ -39,15 +39,4 @@ public class ContratanteService {
         log.info("Request to delete Contratante : {}", id);
         contratanteRepositorio.deleteById(id);
     }
-
-    // public Optional<Contratante> loginContratante(String email, String senha){
-    //     Optional<Contratante> userLogado = contratanteRepositorio.buscarLogin(email, senha);
-    //     return userLogado;
-    // }
-
-    // public List<Contratante> saveAll(List<Contratante> contratanteList) {
-    //     log.info("Request to save Contratante : {}", contratanteList);
-    //     contratanteList = contratanteRepositorio.saveAll(contratanteList);
-    //     return contratanteList;
-    // }
 }

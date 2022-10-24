@@ -14,7 +14,6 @@ import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.server.ResponseStatusException;
-import org.springframework.web.servlet.ModelAndView;
 
 import br.com.ivinerejose.plusAds.model.Contratante;
 import br.com.ivinerejose.plusAds.service.ContratanteService;
@@ -78,23 +77,4 @@ public class ContratanteController {
         return ResponseEntity.noContent().build();
     }
 
-    // retorna contratante com email e senha informados
-    // @PostMapping("/login/{email}/{senha}")
-    // public ModelAndView login(@PathVariable String email, @PathVariable String senha){
-    //     if(email == null || senha == null){
-    //         throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "Contratante can't to be login");
-    //     }
-    //     ModelAndView result = contratanteService.loginContratante(email, senha);
-    //     return ResponseEntity.ok().body(result.get());
-    // }
-
-    /* 
-     * public ResponseEntity<Contratante> create(@RequestBody Contratante contratante){
-        if(contratante.getId() != 0){
-            throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "New Contratante can't exist id");
-        }
-        Contratante result = contratanteService.save(contratante);
-        return ResponseEntity.ok().body(contratante);
-    }
-     */
 }
